@@ -1,0 +1,687 @@
+Wed Dec  9 21:00:30 PST 2020
+Linux csslab7.uwb.edu 3.10.0-1127.19.1.el7.x86_64 #1 SMP Tue Aug 25 17:23:54 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+uid=1091439(dhimitri) gid=2121091439(dhimitri) groups=2121091439(dhimitri),605559(lab-access)
+=====================================================
+1. Compiles without warnings with -Wall -Wextra flags
+=====================================================
+=====================================================
+2. Runs and produces correct output
+=====================================================
+The command line argument(s) was BankTransIn.txt
+ERROR: Could not find Account 0020. History not printed.
+
+Displaying Transaction History for Cash Johnny by fund.
+Money Market: $470
+        D 10010 542
+        W 10010 72
+Prime Money Market: $3042
+        D 10011 1542
+        D 10011 1500
+Long-Term Bond: $10442
+        D 10012 5442
+        D 10012 5000
+Short-Term Bond: $14540
+        D 10013 7540
+        D 10013 7000
+500 Index Fund: $0
+Capital Value Fund: $54
+        D 10015 54
+Growth Equity Fund: $15053
+        D 10016 7542
+        D 10016 7576
+        W 10016 65
+Growth Index Fund: $10931
+        D 10017 5442
+        D 10017 6543
+        W 10017 1000
+        T 10017 54 10015
+        W 10017 20000 (Failed)
+Value Fund: $0
+Value Stock Index: $0
+
+Displaying Transaction History for Williams Hank's 500 Index Fund: $10000
+        D 12534 10000
+
+Displaying Transaction History for Williams Hank by fund.
+Money Market: $10000
+        D 12530 10000
+Prime Money Market: $10000
+        D 12531 10000
+Long-Term Bond: $0
+        D 12532 10000
+        W 12532 10000
+Short-Term Bond: $5000
+        D 12533 10000
+        W 12533 5000
+500 Index Fund: $10000
+        D 12534 10000
+Capital Value Fund: $10000
+        D 12535 10000
+Growth Equity Fund: $10000
+        D 12536 10000
+Growth Index Fund: $10000
+        D 12537 10000
+Value Fund: $10000
+        D 12538 10000
+Value Stock Index: $10000
+        D 12539 10000
+ERROR: Could not find Account 4356. Transfer cancelled.
+ERROR: Account 9876 is already open. Creation refused.
+ERROR: Could not find Account 1005. Transfer cancelled.
+ERROR: Could not find Account 1923. Transfer cancelled.
+ERROR: Could not find Account 1111. Transfer cancelled.
+ERROR: Could not find Account 1111. Transfer cancelled.
+ERROR: Could not find Account 1111. Deposit cancelled.
+ERROR: Could not find Account 1116. Withdrawal cancelled.
+
+Displaying Transaction History for No Thing by fund.
+Money Market: $0
+        T 00010 5 00015 (Failed)
+Prime Money Market: $9
+        D 00011 10
+        T 00011 1 00012
+Long-Term Bond: $1
+        D 00012 1
+Short-Term Bond: $0
+500 Index Fund: $0
+Capital Value Fund: $0
+Growth Equity Fund: $0
+Growth Index Fund: $0
+Value Fund: $0
+Value Stock Index: $0
+
+Displaying Transaction History for My Car by fund.
+Money Market: $0
+        W 19840 1 (Failed, withdrew from Prime Money Market instead)
+        D 19840 1
+        W 19840 1
+Prime Money Market: $0
+        D 19841 1
+        W 19841 1
+        W 19841 1 (Failed, withdrew from Money Market instead)
+Long-Term Bond: $0
+        W 19842 1 (Failed, withdrew from Short-Term Bond instead)
+        D 19842 1
+        W 19842 1
+Short-Term Bond: $0
+        D 19843 1
+        W 19843 1
+        W 19843 1 (Failed, withdrew from Long-Term Bond instead)
+500 Index Fund: $0
+Capital Value Fund: $0
+Growth Equity Fund: $0
+Growth Index Fund: $0
+Value Fund: $0
+Value Stock Index: $0
+
+Processing Done. Final Balances.
+
+No Thing Account ID: 0001
+        Money Market: $0
+        Prime Money Market: $9
+        Long-Term Bond: $1
+        Short-Term Bond: $0
+        500 Index Fund: $0
+        Capital Value Fund: $0
+        Growth Equity Fund: $0
+        Growth Index Fund: $0
+        Value Fund: $0
+        Value Stock Index: $0
+
+Ding Bat Account ID: 0987
+        Money Market: $0
+        Prime Money Market: $0
+        Long-Term Bond: $0
+        Short-Term Bond: $0
+        500 Index Fund: $0
+        Capital Value Fund: $0
+        Growth Equity Fund: $0
+        Growth Index Fund: $0
+        Value Fund: $0
+        Value Stock Index: $0
+
+Cash Johnny Account ID: 1001
+        Money Market: $469
+        Prime Money Market: $3042
+        Long-Term Bond: $10443
+        Short-Term Bond: $14540
+        500 Index Fund: $0
+        Capital Value Fund: $54
+        Growth Equity Fund: $15053
+        Growth Index Fund: $10931
+        Value Fund: $0
+        Value Stock Index: $0
+
+Williams Hank Account ID: 1253
+        Money Market: $10000
+        Prime Money Market: $10000
+        Long-Term Bond: $0
+        Short-Term Bond: $5000
+        500 Index Fund: $10000
+        Capital Value Fund: $10000
+        Growth Equity Fund: $10000
+        Growth Index Fund: $10000
+        Value Fund: $10000
+        Value Stock Index: $10000
+
+Fool Dolt Account ID: 1952
+        Money Market: $0
+        Prime Money Market: $0
+        Long-Term Bond: $0
+        Short-Term Bond: $0
+        500 Index Fund: $0
+        Capital Value Fund: $0
+        Growth Equity Fund: $0
+        Growth Index Fund: $0
+        Value Fund: $0
+        Value Stock Index: $0
+
+My Car Account ID: 1984
+        Money Market: $0
+        Prime Money Market: $0
+        Long-Term Bond: $0
+        Short-Term Bond: $0
+        500 Index Fund: $0
+        Capital Value Fund: $0
+        Growth Equity Fund: $0
+        Growth Index Fund: $0
+        Value Fund: $0
+        Value Stock Index: $0
+
+Nelson Willie Account ID: 9876
+        Money Market: $0
+        Prime Money Market: $0
+        Long-Term Bond: $0
+        Short-Term Bond: $0
+        500 Index Fund: $0
+        Capital Value Fund: $0
+        Growth Equity Fund: $0
+        Growth Index Fund: $0
+        Value Fund: $0
+        Value Stock Index: $0
+=====================================================
+3. clang-tidy warnings are fixed
+=====================================================
+10737 warnings generated.
+25577 warnings generated.
+36333 warnings generated.
+51014 warnings generated.
+Suppressed 51014 warnings (51014 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+=====================================================
+4. clang-format does not find any formatting issues
+=====================================================
+Running clang-format on ./account.cpp
+Running clang-format on ./bank.cpp
+Running clang-format on ./bstree.cpp
+Running clang-format on ./main.cpp
+=====================================================
+5. No memory leaks using g++
+=====================================================
+=====================================================
+6. No memory leaks using valgrind, look for "definitely lost" 
+=====================================================
+==4374== Memcheck, a memory error detector
+==4374== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4374== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==4374== Command: ./a.out BankTransIn.txt
+==4374== Parent PID: 4277
+==4374== 
+==4374== 
+==4374== HEAP SUMMARY:
+==4374==     in use at exit: 0 bytes in 0 blocks
+==4374==   total heap usage: 218 allocs, 218 frees, 120,369 bytes allocated
+==4374== 
+==4374== All heap blocks were freed -- no leaks are possible
+==4374== 
+==4374== For lists of detected and suppressed errors, rerun with: -s
+==4374== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+=====================================================
+7. Tests have full code coverage
+=====================================================
+File '/home/NETID/dhimitri/2020au342c-p5-banking-dhimitrimano/account.cpp':
+Name                                                 Regions    Miss   Cover     Lines    Miss   Cover
+------------------------------------------------------------------------------------------------------
+Account::Account(std::string&, std::string&, int&)         3       0 100.00%         9       0 100.00%
+------------------------------------------------------------------------------------------------------
+TOTAL                                                      3       0 100.00%         9       0 100.00%
+
+File '/home/NETID/dhimitri/2020au342c-p5-banking-dhimitrimano/bank.cpp':
+Name                                                 Regions    Miss   Cover     Lines    Miss   Cover
+------------------------------------------------------------------------------------------------------
+Bank::Bank()                                               1       0 100.00%         1       0 100.00%
+Bank::processTransactionFile(std::string const&)           3       0 100.00%         8       0 100.00%
+Bank::transactionHandler()                                53       0 100.00%       107       0 100.00%
+Bank::manipulate(Account*, int, int)                      27       0 100.00%        36       0 100.00%
+Bank::transfer(Account*, Account*, int, int, int)          4       0 100.00%        14       0 100.00%
+------------------------------------------------------------------------------------------------------
+TOTAL                                                     88       0 100.00%       166       0 100.00%
+
+File '/home/NETID/dhimitri/2020au342c-p5-banking-dhimitrimano/bstree.cpp':
+Name                                                       Regions    Miss   Cover     Lines    Miss   Cover
+------------------------------------------------------------------------------------------------------------
+BSTree::BSTree()                                                 1       0 100.00%         1       0 100.00%
+BSTree::helpDelete(Node*)                                        7       0 100.00%        12       0 100.00%
+BSTree::~BSTree()                                                3       0 100.00%         6       0 100.00%
+BSTree::helpInsert(Account*, Node*)                             17       0 100.00%        18       0 100.00%
+BSTree::insert(Account*)                                         4       0 100.00%         7       0 100.00%
+BSTree::helpRetrieve(int const&, Account*&, Node*) const        17       0 100.00%        16       0 100.00%
+BSTree::retrieve(int const&, Account*&) const                    4       0 100.00%         7       0 100.00%
+BSTree::helpDisplay(Node*) const                                 8       0 100.00%        15       0 100.00%
+BSTree::display() const                                          1       0 100.00%         4       0 100.00%
+BSTree::helpClear(Node*)                                         7       0 100.00%        12       0 100.00%
+BSTree::clear()                                                  1       0 100.00%         1       0 100.00%
+BSTree::isEmpty() const                                          1       0 100.00%         1       0 100.00%
+------------------------------------------------------------------------------------------------------------
+TOTAL                                                           71       0 100.00%       100       0 100.00%
+
+File '/home/NETID/dhimitri/2020au342c-p5-banking-dhimitrimano/main.cpp':
+Name                                                       Regions    Miss   Cover     Lines    Miss   Cover
+------------------------------------------------------------------------------------------------------------
+main                                                             4       0 100.00%        11       0 100.00%
+------------------------------------------------------------------------------------------------------------
+TOTAL                                                            4       0 100.00%        11       0 100.00%
+/home/NETID/dhimitri/2020au342c-p5-banking-dhimitrimano/account.cpp:
+    1|       |#include "account.h"
+    2|       |
+    3|      8|Account::Account(string &firstN, string &lastN, int &idN) {
+    4|      8|  firstName = firstN;
+    5|      8|  lastName = lastN;
+    6|      8|  idNumber = idN;
+    7|      8|  idNumberString = to_string(idNumber);
+    8|     12|  while (idNumberString.length() != 4) {
+    9|      4|    idNumberString.insert(0, "0");
+   10|      4|  }
+   11|      8|}
+
+/home/NETID/dhimitri/2020au342c-p5-banking-dhimitrimano/bank.cpp:
+    1|       |#include "bank.h"
+    2|       |
+    3|      1|Bank::Bank() = default;
+    4|       |
+    5|      1|void Bank::processTransactionFile(const string &fileName) {
+    6|      1|  string str;
+    7|      1|  ifstream input(fileName);
+    8|     63|  while (getline(input, str)) {
+    9|     62|    actions.push(str);
+   10|     62|  }
+   11|      1|  transactionHandler();
+   12|      1|}
+   13|       |
+   14|      1|void Bank::transactionHandler() {
+   15|      1|  int id1 = -1;
+   16|      1|  int id2 = -1;
+   17|      1|  Account *acc1;
+   18|      1|  Account *acc2;
+   19|      1|  int fund1 = -1;
+   20|      1|  int fund2 = -1;
+   21|      1|  int asset = -1;
+   22|      1|  int nameLength = -1;
+   23|      1|  string firstN;
+   24|      1|  string lastN;
+   25|     63|  while (!actions.empty()) {
+   26|     62|    if (actions.front().at(0) == 'O') {
+   27|      8|      id1 = stoi(actions.front().substr(actions.front().size() - 4));
+   28|      8|      nameLength = 0;
+   29|     44|      for (int i = 2; i < actions.front().size(); i++) {
+   30|     44|        if (actions.front().at(i) == ' ') {
+   31|      8|          break;
+   32|      8|        }
+   33|     36|        nameLength++;
+   34|     36|      }
+   35|      8|      lastN = actions.front().substr(2, nameLength);
+   36|      8|      nameLength = 0;
+   37|     42|      for (int i = 2 + lastN.size() + 1; i < actions.front().size(); i++) {
+   38|     42|        if (actions.front().at(i) == ' ') {
+   39|      8|          break;
+   40|      8|        }
+   41|     34|        nameLength++;
+   42|     34|      }
+   43|      8|      firstN = actions.front().substr(2 + lastN.size() + 1, nameLength);
+   44|      8|      if (!accounts.insert(new Account(firstN, lastN, id1))) {
+   45|      1|        cout << "ERROR: Account "
+   46|      1|             << actions.front().substr(actions.front().size() - 4)
+   47|      1|             << " is already open. Creation refused." << endl;
+   48|      1|      }
+   49|      8|    }
+   50|     62|    if (actions.front().at(0) == 'D') {
+   51|     27|      id1 = stoi(actions.front().substr(2, 4));
+   52|     27|      fund1 = actions.front().at(6) - '0';
+   53|     27|      if (accounts.retrieve(id1, acc1)) {
+   54|     26|        asset = stoi(actions.front().substr(8));
+   55|     26|        manipulate(acc1, fund1, asset);
+   56|     26|      } else {
+   57|      1|        cout << "ERROR: Could not find Account " << actions.front().substr(2, 4)
+   58|      1|             << ". Deposit cancelled." << endl;
+   59|      1|      }
+   60|     27|    }
+   61|     62|    if (actions.front().at(0) == 'W') {
+   62|     11|      id1 = stoi(actions.front().substr(2, 4));
+   63|     11|      fund1 = actions.front().at(6) - '0';
+   64|     11|      if (accounts.retrieve(id1, acc1)) {
+   65|     10|        asset = stoi(actions.front().substr(8));
+   66|     10|        manipulate(acc1, fund1 + 10, asset);
+   67|     10|      } else {
+   68|      1|        cout << "ERROR: Could not find Account " << actions.front().substr(2, 4)
+   69|      1|             << ". Withdrawal cancelled." << endl;
+   70|      1|      }
+   71|     11|    }
+   72|     62|    if (actions.front().at(0) == 'T') {
+   73|     10|      id1 = stoi(actions.front().substr(2, 4));
+   74|     10|      fund1 = actions.front().at(6) - '0';
+   75|     10|      id2 = stoi(actions.front().substr(actions.front().size() - 5, 4));
+   76|     10|      fund2 = actions.front().at(actions.front().size() - 1) - '0';
+   77|     10|      if (accounts.retrieve(id1, acc1) && accounts.retrieve(id2, acc2)) {
+   78|      6|        asset = stoi(actions.front().substr(8, actions.front().size() - 14));
+   79|      6|        transfer(acc1, acc2, fund1, fund2, asset);
+   80|      6|      }
+   81|     10|      if (!accounts.retrieve(id1, acc1)) {
+   82|      1|        cout << "ERROR: Could not find Account " << actions.front().substr(2, 4)
+   83|      1|             << ". Transfer cancelled." << endl;
+   84|      1|      }
+   85|     10|      if (!accounts.retrieve(id2, acc2)) {
+   86|      4|        cout << "ERROR: Could not find Account "
+   87|      4|             << actions.front().substr(actions.front().size() - 5, 4)
+   88|      4|             << ". Transfer cancelled." << endl;
+   89|      4|      }
+   90|     10|    }
+   91|     62|    if (actions.front().at(0) == 'H') {
+   92|      6|      id1 = stoi(actions.front().substr(2, 4));
+   93|      6|      if (accounts.retrieve(id1, acc1)) {
+   94|      5|        cout << endl
+   95|      5|             << "Displaying Transaction History for " << acc1->lastName << " "
+   96|      5|             << acc1->firstName;
+   97|      5|        if (actions.front().size() == 7) {
+   98|      1|          cout << "'s " << acc1->funds[actions.front().at(6) - '0'] << ": $"
+   99|      1|               << acc1->assets[actions.front().at(6) - '0'] << endl
+  100|      1|               << acc1->history[actions.front().at(6) - '0'];
+  101|      4|        } else {
+  102|      4|          cout << " by fund." << endl;
+  103|     44|          for (int i = 0; i < 10; i++) {
+  104|     40|            cout << acc1->funds[i] << ": $" << acc1->assets[i];
+  105|     40|            if (!acc1->history[i].empty()) {
+  106|     24|              cout << endl << acc1->history[i];
+  107|     24|            } else {
+  108|     16|              cout << endl;
+  109|     16|            }
+  110|     40|          }
+  111|      4|        }
+  112|      5|      } else {
+  113|      1|        cout << "ERROR: Could not find Account " << actions.front().substr(2, 4)
+  114|      1|             << ". History not printed." << endl;
+  115|      1|      }
+  116|      6|    }
+  117|     62|    actions.pop();
+  118|     62|  }
+  119|      1|  accounts.display();
+  120|      1|}
+  121|       |
+  122|     43|void Bank::manipulate(Account *acc, int fund, int assets) {
+  123|     43|  stringstream ss;
+  124|     43|  if (fund > 9) {
+  125|     14|    assets = 0 - assets;
+  126|     14|    fund -= 10;
+  127|     14|    ss << "        W ";
+  128|     14|    ss << acc->idNumberString << fund << " " << 0 - assets;
+  129|     29|  } else {
+  130|     29|    ss << "        D ";
+  131|     29|    ss << acc->idNumberString << fund << " " << assets;
+  132|     29|  }
+  133|     43|  int leftovers = (0 - assets) - acc->assets[fund];
+  134|     43|  if (acc->assets[fund] + assets >= 0) {
+  135|     38|    acc->assets[fund] += assets;
+  136|     38|  } else if (fund == 0 && acc->assets[1] - leftovers >= 0) {
+  137|      1|    acc->assets[1] -= (0 - assets) - leftovers;
+  138|      1|    manipulate(acc, 11, leftovers);
+  139|      1|    ss << " (Failed, withdrew from Prime Money Market instead)";
+  140|      4|  } else if (fund == 1 && acc->assets[0] - leftovers >= 0) {
+  141|      1|    acc->assets[0] -= (0 - assets) - leftovers;
+  142|      1|    manipulate(acc, 10, leftovers);
+  143|      1|    ss << " (Failed, withdrew from Money Market instead)";
+  144|      3|  } else if (fund == 2 && acc->assets[3] - leftovers >= 0) {
+  145|      1|    acc->assets[3] -= (0 - assets) - leftovers;
+  146|      1|    manipulate(acc, 13, leftovers);
+  147|      1|    ss << " (Failed, withdrew from Short-Term Bond instead)";
+  148|      2|  } else if (fund == 3 && acc->assets[2] - leftovers >= 0) {
+  149|      1|    acc->assets[2] -= (0 - assets) - leftovers;
+  150|      1|    manipulate(acc, 12, leftovers);
+  151|      1|    ss << " (Failed, withdrew from Long-Term Bond instead)";
+  152|      1|  } else {
+  153|      1|    ss << " (Failed)";
+  154|      1|  }
+  155|     43|  ss << "\n";
+  156|     43|  acc->history[fund].append(ss.str());
+  157|     43|}
+  158|       |
+  159|       |void Bank::transfer(Account *accWith, Account *accDep, int fundWith,
+  160|      6|                    int fundDep, int assets) {
+  161|      6|  stringstream ss;
+  162|      6|  ss << "        T ";
+  163|      6|  ss << accWith->idNumberString << fundWith << " " << assets << " "
+  164|      6|     << accDep->idNumberString << fundDep;
+  165|      6|  if (accWith->assets[fundWith] - assets >= 0) {
+  166|      3|    accWith->assets[fundWith] -= assets;
+  167|      3|    manipulate(accDep, fundDep, assets);
+  168|      3|  } else {
+  169|      3|    ss << " (Failed)";
+  170|      3|  }
+  171|      6|  ss << "\n";
+  172|      6|  accDep->history[fundWith].append(ss.str());
+  173|      6|}
+
+/home/NETID/dhimitri/2020au342c-p5-banking-dhimitrimano/bstree.cpp:
+    1|       |
+    2|       |#include "bstree.h"
+    3|       |#include <string>
+    4|       |
+    5|       |using namespace std;
+    6|       |
+    7|      1|BSTree::BSTree() = default;
+    8|       |
+    9|      7|void BSTree::helpDelete(Node *node) {
+   10|      7|  if (node->left != nullptr) {
+   11|      3|    helpDelete(node->left);
+   12|      3|  }
+   13|      7|  if (node->right != nullptr) {
+   14|      3|    helpDelete(node->right);
+   15|      3|  }
+   16|      7|  if (node != nullptr) {
+   17|      7|    delete node;
+   18|      7|    return;
+   19|      7|  }
+   20|      7|}
+   21|       |
+   22|      1|BSTree::~BSTree() {
+   23|      1|  if (!this->isEmpty()) {
+   24|      1|    clear();
+   25|      1|    helpDelete(root);
+   26|      1|  }
+   27|      1|}
+   28|       |
+   29|     16|bool BSTree::helpInsert(Account *account, Node *node) {
+   30|     16|  if (account->idNumber == node->account->idNumber) {
+   31|      1|    delete account;
+   32|      1|    return false;
+   33|      1|  }
+   34|     15|  if (account->idNumber < node->account->idNumber) {
+   35|      5|    if (node->left == nullptr || node->left->account == nullptr) {
+   36|      3|      node->left = new Node(account);
+   37|      3|      return true;
+   38|      3|    }
+   39|      2|    return helpInsert(account, node->left);
+   40|      2|  }
+   41|     10|  if (node->right == nullptr || node->right->account == nullptr) {
+   42|      3|    node->right = new Node(account);
+   43|      3|    return true;
+   44|      3|  }
+   45|      7|  return helpInsert(account, node->right);
+   46|      7|}
+   47|       |
+   48|      8|bool BSTree::insert(Account *account) {
+   49|      8|  if (root->account == nullptr) {
+   50|      1|    root->account = account;
+   51|      1|    return true;
+   52|      1|  }
+   53|      7|  return helpInsert(account, root);
+   54|      7|}
+   55|       |
+   56|       |bool BSTree::helpRetrieve(const int &accountNumber, Account *&account,
+   57|    199|                          Node *node) const {
+   58|    199|  if (node->account->idNumber == accountNumber) {
+   59|     71|    account = node->account;
+   60|     71|    return true;
+   61|     71|  }
+   62|    128|  if (accountNumber < node->account->idNumber) {
+   63|     50|    if (node->left == nullptr || node->left->account == nullptr) {
+   64|      9|      return false;
+   65|      9|    }
+   66|     41|    return helpRetrieve(accountNumber, account, node->left);
+   67|     41|  }
+   68|     78|  if (node->right == nullptr || node->right->account == nullptr) {
+   69|      2|    return false;
+   70|      2|  }
+   71|     76|  return helpRetrieve(accountNumber, account, node->right);
+   72|     76|}
+   73|       |
+   74|     83|bool BSTree::retrieve(const int &accountNumber, Account *&account) const {
+   75|     83|  if (root->account == nullptr) {
+   76|      1|    account = root->account;
+   77|      1|    return false;
+   78|      1|  }
+   79|     82|  return helpRetrieve(accountNumber, account, root);
+   80|     82|}
+   81|       |
+   82|      7|void BSTree::helpDisplay(Node *node) const {
+   83|      7|  if (node->left != nullptr) {
+   84|      3|    helpDisplay(node->left);
+   85|      3|  }
+   86|      7|  cout << endl
+   87|      7|       << node->account->lastName << ' ' << node->account->firstName
+   88|      7|       << " Account ID: " << node->account->idNumberString << endl;
+   89|     77|  for (int i = 0; i < 10; i++) {
+   90|     70|    cout << "        " << node->account->funds[i] << ": $"
+   91|     70|         << node->account->assets[i] << endl;
+   92|     70|  }
+   93|      7|  if (node->right != nullptr) {
+   94|      3|    helpDisplay(node->right);
+   95|      3|  }
+   96|      7|}
+   97|       |
+   98|      1|void BSTree::display() const {
+   99|      1|  cout << endl << "Processing Done. Final Balances." << endl;
+  100|      1|  helpDisplay(root);
+  101|      1|}
+  102|       |
+  103|      7|void BSTree::helpClear(Node *node) {
+  104|      7|  if (node->left != nullptr) {
+  105|      3|    helpClear(node->left);
+  106|      3|  }
+  107|      7|  if (node->right != nullptr) {
+  108|      3|    helpClear(node->right);
+  109|      3|  }
+  110|      7|  if (node->account != nullptr) {
+  111|      7|    delete node->account;
+  112|      7|    return;
+  113|      7|  }
+  114|      7|}
+  115|       |
+  116|      1|void BSTree::clear() { helpClear(root); }
+  117|       |
+  118|      1|bool BSTree::isEmpty() const { return root == nullptr; }
+
+/home/NETID/dhimitri/2020au342c-p5-banking-dhimitrimano/bstree.h:
+    1|       |
+    2|       |#ifndef BSTREE_H
+    3|       |#define BSTREE_H
+    4|       |
+    5|       |#include "account.h"
+    6|       |#include <iostream>
+    7|       |
+    8|       |struct Node {
+    9|       |public:
+   10|       |  Account *account;
+   11|       |  Node *right;
+   12|       |  Node *left;
+   13|      7|  explicit Node(Account *acc) : account(acc), right(nullptr), left(nullptr) {}
+   14|       |};
+   15|       |
+   16|       |class BSTree {
+   17|       |public:
+   18|       |  // Create BST
+   19|       |  BSTree();
+   20|       |
+   21|       |  // Delete all nodes in BST
+   22|       |  ~BSTree();
+   23|       |
+   24|       |  // inserts a new account and returns true if it is inserted successfully
+   25|       |  bool insert(Account *account);
+   26|       |
+   27|       |  // returns true if successful AND *Account points to account
+   28|       |  bool retrieve(const int &accountNumber, Account *&account) const;
+   29|       |
+   30|       |  // displays information on all accounts
+   31|       |  void display() const;
+   32|       |
+   33|       |  // deletes all information in AccountTree
+   34|       |  void clear();
+   35|       |
+   36|       |  // returns true if tree is empty
+   37|       |  bool isEmpty() const;
+   38|       |
+   39|       |  // copy not allowed
+   40|       |  BSTree(const BSTree &other) = delete;
+   41|       |
+   42|       |  // move not allowed
+   43|       |  BSTree(BSTree &&other) = delete;
+   44|       |
+   45|       |  // assignment not allowed
+   46|       |  BSTree &operator=(const BSTree &other) = delete;
+   47|       |
+   48|       |  // move assignment not allowed
+   49|       |  BSTree &operator=(BSTree &&other) = delete;
+   50|       |
+   51|       |private:
+   52|       |  Node *root = new Node(nullptr);
+   53|       |
+   54|       |  // Helper function for destructor
+   55|       |  void helpDelete(Node *node);
+   56|       |
+   57|       |  // Helper function for insert. deletes the account if it is not inserted successfully
+   58|       |  bool helpInsert(Account *account, Node *node);
+   59|       |
+   60|       |  // Helper function for retrieve
+   61|       |  bool helpRetrieve(const int &accountNumber, Account *&account, Node *node) const;
+   62|       |
+   63|       |  // Helper function for display
+   64|       |  void helpDisplay(Node *node) const;
+   65|       |
+   66|       |  // Helper function for clear
+   67|       |  void helpClear(Node *node);
+   68|       |};
+   69|       |#endif // BSTREE_H
+
+/home/NETID/dhimitri/2020au342c-p5-banking-dhimitrimano/main.cpp:
+    1|       |#include "bank.h"
+    2|       |#include <iostream>
+    3|       |#include <string>
+    4|       |
+    5|       |using namespace std;
+    6|       |
+    7|      1|int main(int argc, char *argv[]) {
+    8|      1|  Bank bank;
+    9|      1|  // Note that tests were done in BankTransIn.txt
+   10|      2|  for (int i = 1; i < argc; ++i) {
+   11|      1|    cout << "The command line argument(s) was " << argv[i] << std::endl;
+   12|      1|    string fileName = argv[i];
+   13|      1|    bank.processTransactionFile(fileName);
+   14|      1|  }
+   15|      1|
+   16|      1|  return 0;
+   17|      1|}
+
+Wed Dec  9 21:01:04 PST 2020
+=====================================================
+To create an output.txt file with all the output from this script
+Run the below command
+      ./create-output.sh > output.txt 2>&1 
+=====================================================
